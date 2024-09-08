@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = 'https://user-management-backend-xml9.onrender.com/users';
+  private apiUrl = 'https://user-management-backend-1-xc6g.onrender.com/users';
 
   constructor(private http: HttpClient) { }
 
