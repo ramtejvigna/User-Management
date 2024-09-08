@@ -1,0 +1,34 @@
+<div class="min-h-screen bg-gray-100 flex flex-col">
+    <!-- Greeting Section -->
+    <div class="bg-black p-6 rounded shadow-md text-white text-center">
+        <h2 class="text-2xl font-bold mb-6">Hello, {{ user.username }}!</h2>
+        <p class="text-lg mb-6">User Email: {{ user.email }}</p>
+    </div>
+
+    <!-- Update Profile Section -->
+    <div class="flex justify-center items-center">
+        <div class="bg-white p-6 rounded-xl shadow-md m-10 w-96">
+            <h2 class="text-2xl font-bold mb-6 text-center">Update Profile</h2>
+            <form (ngSubmit)="updateProfile()">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Username</label>
+                        <input type="text" name="username" [(ngModel)]="formUser.username"
+                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm sm:text-sm"
+                            placeholder="Enter new username">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" name="email" [(ngModel)]="formUser.email"
+                            class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm sm:text-sm"
+                            placeholder="Enter new email">
+                    </div>
+                    <button type="submit"
+                        class="bg-blue-500 text-white px-6 py-3 rounded-lg w-full font-semibold hover:bg-blue-600 transition duration-300 ease-in-out">
+                        Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
