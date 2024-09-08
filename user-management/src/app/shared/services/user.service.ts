@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = 'http://localhost:3000/users';
+  private apiUrl = 'https://user-management-backend-sage.vercel.app/users';
 
   constructor(private http: HttpClient) { }
 
